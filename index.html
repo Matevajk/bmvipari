@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,16 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <nav class="nav" aria-label="Language switch">
+      <button id="btn-en" class="lang-btn" aria-pressed="false">EN</button>
+      <button id="btn-hu" class="lang-btn" aria-pressed="false">HU</button>
+    </nav>
+  </header>
+
   <main id="content" role="main" aria-live="polite">
     <!-- Content injected by script.js -->
-    <noscript>
-      <div class="fallback">
-        <h1>BMV Ipari Vállalat</h1>
-        <p>Of course we will do manufacturing.<br>Quality — you deserve it.<br><strong>Coming in 2028.</strong></p>
-        <div class="contact">Temporary contact: <a href="mailto:banatiize@gmail.com">banatiize@gmail.com</a></div>
-        <div class="sigil">bmvipari.hu – All rights reserved</div>
-      </div>
-    </noscript>
   </main>
 
   <script src="script.js" defer></script>
