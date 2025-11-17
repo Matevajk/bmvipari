@@ -42,14 +42,36 @@
       color: #f5f5f5;
       text-decoration: underline;
     }
+    .lang-hu, .lang-en {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h1>BMV Ipari Vállalat</h1>
-  <p>Of Course we will do manufacturing.<br>Minőség, Önnek jár<br><strong>Coming in 2028.</strong></p>
-  <div class="contact">
-    Ideiglenes kapcsolat: <a href="mailto:banatiize@gmail.com">banatiize@gmail.com</a>
+  <div class="lang-hu">
+    <h1>BMV Ipari Vállalat</h1>
+    <p>Természetesen gyártani fogunk.<br>Minőség, Önnek jár<br><strong>Érkezés: 2028</strong></p>
+    <div class="contact">
+      Ideiglenes kapcsolat: <a href="mailto:banatiize@gmail.com">banatiize@gmail.com</a>
+    </div>
+    <div class="sigil">bmvipari.hu – Minden jog fenntartva</div>
   </div>
-  <div class="sigil">bmvipari.hu – Minden jog fenntartva</div>
-</body>
-</html>
+
+  <div class="lang-en">
+    <h1>BMV Ipari Vállalat</h1>
+    <p>Of course we will do manufacturing.<br>Quality — you deserve it<br><strong>Coming in 2028.</strong></p>
+    <div class="contact">
+      Temporary contact: <a href="mailto:banatiize@gmail.com">banatiize@gmail.com</a>
+    </div>
+    <div class="sigil">bmvipari.hu – All rights reserved</div>
+  </div>
+
+  <script>
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        const isHungary = data.country === "HU";
+        document.querySelector('.lang-' + (isHungary ? 'hu' : 'en')).style.display = 'block';
+      })
+      .catch(() => {
+        document.querySelector
