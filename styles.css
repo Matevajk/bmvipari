@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #f5f5f5;
+  font-family: 'Segoe UI', 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.3em;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0.5em 0;
+}
+
+.contact {
+  margin-top: 2em;
+  font-size: 1em;
+  color: #ccc;
+}
+
+.sigil {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: #888;
+}
+
+a {
+  color: #f5f5f5;
+  text-decoration: underline;
+}
+
+.lang-hu,
+.lang-en {
+  display: none;
+}
